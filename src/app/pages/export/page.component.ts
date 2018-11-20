@@ -8,7 +8,7 @@ const GRADE_DISPLAY_NAME = {
 	2: 'Middle',
 	3: 'Senior',
 	4: 'Principal',
-}
+};
 
 @Component({
 	selector: 'app-export-page',
@@ -25,13 +25,13 @@ export class ExportPageComponent {
 			{headerName: 'Email', field: 'email'},
 			{headerName: 'First Name', field: 'firstName'},
 			{headerName: 'Last Name', field: 'lastName'},
-			{headerName: 'Birth Date', field: 'birthDate', 
+			{headerName: 'Birth Date', field: 'birthDate',
 				// valueFormatter will not work here because it changes a data for display only
 				valueGetter: (params: ValueGetterParams) => {
 					return new Date(params.data.birthDate).toLocaleDateString();
 				},
 			},
-			{headerName: 'Grade', field: 'grade', 
+			{headerName: 'Grade', field: 'grade',
 				// valueFormatter will not work here because it changes a data for display only
 				valueGetter: (params: ValueGetterParams) => {
 					return GRADE_DISPLAY_NAME[params.data.grade];

@@ -8,15 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavigationModule } from './components';
-import { 
-	SimplePageComponent, 
-	ValueFormatterPageComponent, 
+import {
+	SimplePageComponent,
+	ValueFormatterPageComponent,
 	FilterSortPageComponent,
 	EditableCellPageComponent,
 	InfiniteScrollPageComponent,
 	ExportPageComponent,
 	CellRendererPageComponent,
-	EmailCellRenderer
+	EmailCellRendererComponent
 } from './pages';
 
 @NgModule({
@@ -29,12 +29,12 @@ import {
 		InfiniteScrollPageComponent,
 		ExportPageComponent,
 		CellRendererPageComponent,
-		EmailCellRenderer
+		EmailCellRendererComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		AgGridModule.withComponents([EmailCellRenderer]),
+		AgGridModule.withComponents([EmailCellRendererComponent]),
 		BrowserAnimationsModule,
 		MatButtonModule,
 		NavigationModule

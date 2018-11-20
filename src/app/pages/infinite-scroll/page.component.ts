@@ -23,7 +23,7 @@ export class InfiniteScrollPageComponent {
 
 	public gridOptions: GridOptions = {
 		onGridReady: (params: GridReadyEvent) => this.onGridReady(params),
-		rowModelType: "infinite",
+		rowModelType: 'infinite',
 		cacheBlockSize: 30,
 
 		columnDefs: [
@@ -54,18 +54,18 @@ export class InfiniteScrollPageComponent {
 
 		const dataSource = {
 			rowCount: null,
-			getRows: (params) => {
-			  setTimeout(() => {
-				const rowsThisPage = data.slice(params.startRow, params.endRow);
-				let lastRow = -1;
-				if (data.length <= params.endRow) {
-				  lastRow = data.length;
-				}
-				params.successCallback(rowsThisPage, lastRow);
-			  }, 1500);
+			getRows: (getRowsParams) => {
+				setTimeout(() => {
+					const rowsThisPage = data.slice(getRowsParams.startRow, getRowsParams.endRow);
+					let lastRow = -1;
+					if (data.length <= getRowsParams.endRow) {
+						lastRow = data.length;
+					}
+					getRowsParams.successCallback(rowsThisPage, lastRow);
+				}, 1500);
 			}
-		  };
+			};
 
-		  params.api.setDatasource(dataSource);
+			params.api.setDatasource(dataSource);
 	}
 }

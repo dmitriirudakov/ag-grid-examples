@@ -8,14 +8,14 @@ const GRADE_DISPLAY_NAME = {
 	2: 'Middle',
 	3: 'Senior',
 	4: 'Principal',
-}
+};
 
 const FILTER = {
 	DATE: 'agDateColumnFilter',
 	NUMBER: 'agNumberColumnFilter',
 	TEXT: 'agTextColumnFilter',
 	CUSTOM: '-custom-', // Filter Component where you can provide you own filter written in a framework of your choice
-}
+};
 
 @Component({
 	selector: 'app-filter-sort-page',

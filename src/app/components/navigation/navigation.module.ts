@@ -6,15 +6,15 @@ import { MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule } from 
 import { NavigationComponent } from './navigation.component';
 
 @NgModule({
-  declarations: [NavigationComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatToolbarModule
-  ],
-  exports: [NavigationComponent]
+	declarations: [NavigationComponent],
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatButtonModule,
+		MatIconModule,
+		MatMenuModule,
+		MatToolbarModule
+	],
+	exports: [NavigationComponent]
 })
 export class NavigationModule { }

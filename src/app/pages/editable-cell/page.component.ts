@@ -60,12 +60,12 @@ export class EditableCellPageComponent {
 					return GRADE_DISPLAY_NAME[params.data.grade];
 				},
 				valueSetter: (params: ValueParserParams): boolean => {
-					let isValid: boolean = false;
+					let isValid = false;
 					const employee: Employee = <Employee>params.data;
 
 					const grade: string = Object.keys(GRADE_DISPLAY_NAME)
 						.find(key => GRADE_DISPLAY_NAME[key] === params.newValue);
-					
+
 					if (grade != null) {
 						employee.grade = Number(grade);
 						isValid = true;

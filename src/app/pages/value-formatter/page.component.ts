@@ -8,7 +8,7 @@ const GRADE_DISPLAY_NAME = {
 	2: 'Middle',
 	3: 'Senior',
 	4: 'Principal',
-}
+};
 
 @Component({
 	selector: 'app-value-formatter-page',
@@ -22,12 +22,12 @@ export class ValueFormatterPageComponent {
 			{headerName: 'Email', field: 'email'},
 			{headerName: 'First Name', field: 'firstName'},
 			{headerName: 'Last Name', field: 'lastName'},
-			{headerName: 'Birth Date', field: 'birthDate', 
+			{headerName: 'Birth Date', field: 'birthDate',
 				valueFormatter: (params: ValueFormatterParams) => {
 					return new Date(params.value).toLocaleDateString();
 				}
 			},
-			{headerName: 'Grade', field: 'grade', 
+			{headerName: 'Grade', field: 'grade',
 				valueFormatter: (params: ValueFormatterParams) => {
 					return GRADE_DISPLAY_NAME[params.value];
 				}},
