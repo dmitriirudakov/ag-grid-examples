@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Ag-Grid Examples</span>
+      <span class="spacer"></span>
+      <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+        Pages
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let route of routes" routerLink="{{route.path}}">
+            {{route.name}}
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
