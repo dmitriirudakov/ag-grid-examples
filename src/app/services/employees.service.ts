@@ -18,8 +18,7 @@ export class EmployeesService {
 			email: faker.internet.email(),
 			firstName: faker.name.firstName(),
 			lastName: faker.name.lastName(),
-			// between 1/1/1950 and 1/1/2000
-			birthDate: +faker.date.between(new Date(-631166400000), new Date(946674000000)),
+			birthDate: +faker.date.between(new Date('1/1/1950'), new Date('1/1/2000')),
 			grade: faker.random.number({min: 1, max: 4}),
 			specialization: faker.helpers.randomize(['FrontEnd', 'BackEnd', 'Business Analyst', 'QA']),
 			experienceYears: faker.random.number({min: 0, max: 5}),
