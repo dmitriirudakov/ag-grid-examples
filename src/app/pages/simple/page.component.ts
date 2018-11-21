@@ -11,6 +11,7 @@ import { EmployeesService } from '../../services';
 export class SimplePageComponent {
 
 	public gridOptions: GridOptions = {
+		// domLayout: 'autoHeight', // set height in css or use auto height
 		columnDefs: [
 			{headerName: 'Email', field: 'email'},
 			{headerName: 'First Name', field: 'firstName'},
